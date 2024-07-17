@@ -14,4 +14,4 @@ runtime plugin/gx.lua
 lua require('gx').setup()
 
 " needed for go handler testing
-lua require('nvim-treesitter.configs').setup({ ensure_installed = { "go" }, sync_install = true })
+lua require('nvim-treesitter.configs').setup({ ensure_installed = { "go","terraform" }, sync_install = true })

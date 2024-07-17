@@ -9,6 +9,7 @@ local commit_handler = require("gx.handlers.commit")
 local markdown_handler = require("gx.handlers.markdown")
 local cve_handler = require("gx.handlers.cve")
 local search_handler = require("gx.handlers.search")
+local tf_handler = require("gx.handlers.tf")
 
 local M = {}
 
@@ -47,6 +48,7 @@ local function resolve_handlers(handlers)
   add_handler(resolved, cve_handler, handlers.cve and exists.cve == nil)
   add_handler(resolved, url_handler, handlers.url and exists.url == nil)
   add_handler(resolved, search_handler, handlers.search and exists.search == nil)
+  add_handler(resolved, tf_handler, handlers.tf and exists.tf == nil)
   -- ###
 
   return resolved
